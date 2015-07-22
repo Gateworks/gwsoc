@@ -1,0 +1,11 @@
+Export
+codegentemp
+CortexM3
+Generated_Source
+*.rpt
+*.pdf
+*.html
+*.cyprj.*
+*.cyfit
+*.cycdx
+*.svd
