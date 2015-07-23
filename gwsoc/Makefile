@@ -6,7 +6,7 @@ CYAPI = cybootloaderutils/cybtldr_api2.c \
 	cybootloaderutils/cybtldr_command.c \
 	cybootloaderutils/cybtldr_parse.c
 
-LDFLAGS:=-lhidapi-libusb -ludev
+LDFLAGS:=-lhidapi-libusb
 
 all: gwsoc
 
