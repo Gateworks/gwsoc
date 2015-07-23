@@ -99,7 +99,10 @@ uint8_t *gwsoc_hid_read(hid_device *handle, int *len)
 		break;
 	case GET_CONFIG:
 	case SET_CONFIG:
-		printf("config%d=0x%08x\n", buf[4], get_uint32(buf+8));
+		if (buf[4] == 0)
+			printf("config%d=%s\n", buf[4], (char*) buf+8);
+		else
+			printf("config%d=0x%08x\n", buf[4], get_uint32(buf+8));
 		break;
 	case GET_GPIO_DIR:
 	case SET_GPIO_DIR:
