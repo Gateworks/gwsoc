@@ -1,4 +1,4 @@
-CFLAGS += -Wall -Wno-pointer-sign
+CFLAGS += -Wall -Wno-pointer-sign -std=gnu90
 
 CFLAGS += -I cybootloaderutils
 CYAPI = cybootloaderutils/cybtldr_api2.c \
