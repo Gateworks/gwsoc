@@ -14,7 +14,7 @@
 #include <hidapi/hidapi.h>
 
 /* get a 32bit unsigned int from network and return in host order */
-inline uint32_t get_uint32(uint8_t *buf)
+static inline uint32_t get_uint32(uint8_t *buf)
 {
 	uint32_t val;
 
@@ -28,7 +28,7 @@ inline uint32_t get_uint32(uint8_t *buf)
 }
 
 /* output 32bit unsigned int in network byte order */
-inline void set_uint32(uint8_t *buf, uint32_t val)
+static inline void set_uint32(uint8_t *buf, uint32_t val)
 {
 	val = htonl(val);
 	buf[0] = val & 0xff;
